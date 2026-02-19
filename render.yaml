@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: GigGoals Frontend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install --force && npm run build
+    startCommand: npm run preview
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NPM_VERSION
+        value: 10
